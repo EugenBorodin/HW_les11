@@ -5,8 +5,19 @@ const garden = {
 };
 
 for (let key in garden) {
-    let uppercaseKey = key.toUpperCase();
-    garden[uppercaseKey] = garden[key];
-    delete garden[key];
+    const uppercaseKey = key.toUpperCase();
+    if (uppercaseKey !== key) {
+        garden[uppercaseKey] = garden[key];
+        delete garden[key];
+    }
 }
 
+for (let key in garden) {
+    console.log(garden[key]);
+}
+
+if ("apple" in garden) {
+    garden["pear"] = "delicious";
+    console.log(garden["pear"]);
+  }
+  console.log(garden);
