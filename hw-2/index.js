@@ -16,7 +16,7 @@ for (let key in garden) {
     console.log(garden[key]);
 }
 
-if ("apple" in garden) {
+if ("APPLE" in garden) {
     garden["pear"] = "delicious";
     console.log(garden["pear"]);
   }

@@ -1,41 +1,44 @@
 class Plant {
+    #height;
+    #age;
     constructor(height, age) {
-        this._height = height;
-        this._age = age;
+        this.#height = height;
+        this.#age = age;
     }
     get height() {
-        return this._height
+        return this.#height
     }
 
     set height(value) {
-        this._height = value;
+        this.#height = value;
     }
 
     get age() {
-        return this._age;
+        return this.#age;
     }
 
     set age(value) {
-        this._age = value;
+        this.#age = value;
     }
 
     grow() {
-        this._height += 10;
+        this.#height += 10;
     }
 }
 
 class Rose extends Plant {
+    #numberOfFlowers;
     constructor(height, age, numberOfFlowers) {
         super(height, age);
-        this._numberOfFlowers = numberOfFlowers;
+        this.#numberOfFlowers = numberOfFlowers;
     }
 
     get numberOfFlowers() {
-        return this._numberOfFlowers;
+        return this.#numberOfFlowers;
     }
 
     set numberOfFlowers(value) {
-        this._numberOfFlowers = value;
+        this.#numberOfFlowers = value;
     }
 }
 
